@@ -34,3 +34,40 @@ Para detener el servidor, presiona `Ctrl + C` en la terminal donde lo ejecutaste
 - No requiere base de datos.
 - El archivo `orders.txt` debe estar en la raíz del proyecto.
 - Líneas mal formateadas se ignoran silenciosamente.
+
+## Ejercicios
+
+### Anadir filtro
+
+Permitir que el endpoint soporte filtros opcionales:
+
+`GET /orders?from=YYYY-MM-DD&to=YYYY-MM-DD&status=STATUS`
+
+Requisitos:
+
+- `from` es opcional
+- `to` es opcional
+- `status` es opcional
+- Si no se envían parámetros, debe devolver todos los pedidos
+- Si los parámetros son inválidos, debe devolver una lista vacía
+
+### Actualizar estado de un pedido
+
+Crear un endpoint:
+
+`PUT /orders/{id}/status`
+
+Body:
+
+```json
+{
+  "status": "COMPLETED"
+}
+```
+
+Requisitos:
+
+- Validar que el pedido existe
+- Validar que el estado es válido
+- Actualizar el archivo `orders.txt`
+- Devolver códigos HTTP adecuado
