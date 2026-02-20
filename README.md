@@ -16,6 +16,7 @@
 **PowerShell**
 ```powershell
 .\mvnw.cmd spring-boot:run
+```
 
 El servidor embebido (Tomcat) quedará disponible en:
 
